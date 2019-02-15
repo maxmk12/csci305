@@ -25,7 +25,10 @@
 (setq max 0)  
 (setq li '(-2 4 -3 5 -3 1 -2 3))
 (defvar ti)
+(setq tl (sum li))
 (setq ti (sum2 li))
+(write tl)
+(terpri)
 (write ti)
 (terpri)
 
