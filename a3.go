@@ -5,8 +5,7 @@ import (
 	"regexp"
 	"io/ioutil"
 	"os"
-	"bufio"
-	
+		
 )
 
 func read() string{
@@ -22,11 +21,10 @@ func checkErr(err error){
 }
 
 func write(s string){
-	reader := bufio.NewReader(os.Stdin)
-	fmt.Print("Enter name of file with: ")
-	text, _ := reader.ReadString('\n')
-	fmt.Println(text)
-	NFile, err := os.Create("test.txt")
+	fmt.Print("Enter name of file: ")
+	var first string
+	fmt.Scanln(&first)
+	NFile, err := os.Create(first + ".txt")
 	checkErr(err)
 	fmt.Fprintf(NFile, s)
 }
